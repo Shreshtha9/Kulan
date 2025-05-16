@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaFacebookF, FaInstagram, FaPinterestP, FaYoutube } from 'react-icons/fa';
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
@@ -180,9 +179,9 @@ const LowNav = () => {
                                 key={index}
                                 className="px-4 py-3 hover:bg-[#386861] hover:text-white cursor-pointer text-lg border-b border-[#e6d9a1] last:border-b-0"
                             >
-                                <a href={item.link} className="block w-full h-full">
+                                <Link to={item.link} className="block w-full h-full">
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -197,22 +196,26 @@ const LowNav = () => {
                                     { 
                                         name: 'IT', 
                                         subText: 'Our IT by audience',
-                                        image: '/images/IT.webp'
+                                        image: '/images/IT.webp',
+                                        link: '#'
                                     },
                                     { 
                                         name: 'Marketing', 
                                         subText: 'Our Marketing by audience',
-                                        image: '/images/marketing.webp'
+                                        image: '/images/marketing.webp',
+                                        link: '#'
                                     },
                                     { 
                                         name: 'Sales', 
                                         subText: 'Our Sales by audience',
-                                        image: '/images/sales.webp'
+                                        image: '/images/sales.webp',
+                                        link: '#'
                                     },
                                     { 
                                         name: 'Finance', 
                                         subText: 'Our Finance by audience',
-                                        image: '/images/finance.webp'
+                                        image: '/images/finance.webp',
+                                        link: '#'
                                     },
                                 ].map((item, index) => (
                                     <div 
@@ -236,7 +239,7 @@ const LowNav = () => {
                                         </div>
                                         
                                         {/* Full clickable area */}
-                                        <a href="#" className="absolute inset-0 z-20"></a>
+                                        <Link to={item.link} className="absolute inset-0 z-20"></Link>
                                     </div>
                                 ))}
                             </div>
@@ -276,9 +279,9 @@ const LowNav = () => {
                                 key={index}
                                 className="px-4 py-3 hover:bg-[#386861] hover:text-white cursor-pointer text-lg border-b border-[#e6d9a1] last:border-b-0"
                             >
-                                <a href={item.link} className="block w-full h-full">
+                                <Link to={item.link} className="block w-full h-full">
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
@@ -293,17 +296,20 @@ const LowNav = () => {
                                     { 
                                         name: 'Connect', 
                                         subText: 'B2B Content Syndication',
-                                        image: '/images/b2b.jpg'
+                                        image: '/images/b2b.jpg',
+                                        link: '#'
                                     },
                                     { 
                                         name: 'Engage', 
                                         subText: 'Display Advertising',
-                                        image: '/images/advertise.jpg'
+                                        image: '/images/advertise.jpg',
+                                        link: '#'
                                     },
                                     { 
                                         name: 'Convert', 
                                         subText: 'Sales Development',
-                                        image: '/images/sales.jpg'
+                                        image: '/images/sales.jpg',
+                                        link: '#'
                                     },
                                 ].map((item, index) => (
                                     <div 
@@ -327,7 +333,7 @@ const LowNav = () => {
                                         </div>
                                         
                                         {/* Full clickable area */}
-                                        <a href="#" className="absolute inset-0 z-20"></a>
+                                        <Link to={item.link} className="absolute inset-0 z-20"></Link>
                                     </div>
                                 ))}
                             </div>
@@ -365,9 +371,9 @@ const LowNav = () => {
                                     key={index}
                                     className="px-4 py-3 hover:bg-[#386861] hover:text-white cursor-pointer text-lg border-b border-[#e6d9a1] last:border-b-0"
                                 >
-                                    <a href={item.link} className="block w-full h-full">
+                                    <Link to={item.link} className="block w-full h-full">
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </div>
@@ -375,9 +381,9 @@ const LowNav = () => {
                 </li>
                 
                 <li>
-                    <a href="#" className={`hover:text-gray-700 font-bold ${responsiveStyles.textSize}`}>
+                    <Link to="#" className={`hover:text-gray-700 font-bold ${responsiveStyles.textSize}`}>
                         Contact
-                    </a>
+                    </Link>
                 </li>
 
                 {/* Contact Info and Social Icons for small screens inside hamburger */}
@@ -416,9 +422,9 @@ const LowNav = () => {
                         active:translate-y-0
                     `}
                 >
-                    <a href="#" className="relative z-10">
+                    <Link to="/get-started" className="relative z-10">
                         Get Started Now ↗
-                    </a>
+                    </Link>
                     
                     {/* Animated background elements */}
                     <span className="
