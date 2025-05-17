@@ -72,7 +72,7 @@ const Footer = () => {
       placeholder="Enter your email"
       className="w-full px-4 py-2 bg-[#132623] text-white border border-gray-700 rounded-md focus:outline-none"
     />
- <button className="relative w-full bg-[#F7D270] text-black font-semibold py-2 rounded-md flex items-center justify-center gap-2 overflow-hidden group shadow-md">
+ <button className="relative w-full bg-[#ffd800] text-black font-semibold py-2 rounded-md flex items-center justify-center gap-2 overflow-hidden group shadow-md">
   <span className="relative z-10">Subscribe ↗</span>
   <span className="absolute inset-0 z-0 bg-[#326964] translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out rounded-md" />
 </button>

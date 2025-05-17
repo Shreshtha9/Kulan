@@ -29,7 +29,7 @@ const ProjectStatsComponent = () => {
   }, []);
 
   return (
-    <div className="bg-[#f3c553] flex flex-wrap justify-center py-10 text-center">
+    <div className="bg-[#ffd800] flex flex-wrap justify-center py-10 text-center">
       {statsData.map((stat, index) => (
         <div key={index} className="w-1/2 sm:w-1/3 lg:w-1/5 p-4">
           <h2 className="text-4xl font-bold text-[#1e2e28]">{counts[index].toFixed(2)}{stat.label.includes('%') ? '%' : '+'}</h2>

@@ -173,7 +173,7 @@ const LowNav = () => {
                     >
                         {[
                             { name: 'B2B Content Syndication', link: '#' },
-                            { name: 'Display Advertising', link: '#' },
+                            { name: 'Display Advertising', link: '/display-ads' },
                             { name: 'Sales Development', link: '#' },
                         ].map((item, index) => (
                             <li 
@@ -204,7 +204,7 @@ const LowNav = () => {
                                         name: 'Engage', 
                                         subText: 'Display Advertising',
                                         image: '/images/advertise.jpg',
-                                        link: '#'
+                                        link: '/display-ads'
                                     },
                                     { 
                                         name: 'Convert', 

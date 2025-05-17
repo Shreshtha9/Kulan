@@ -55,7 +55,7 @@ const ServiceCard = ({ service, isHovered, onMouseEnter, onMouseLeave }) => {
         style={{
           height: isHovered ? "50%" : "0%",
           backgroundColor: isHovered
-            ? "rgba(255, 209, 102, 0.9)"
+            ? "rgba(255, 216, 0, 0.9)"
             : "transparent",
           boxShadow: isHovered ? "0 -5px 15px rgba(0,0,0,0.3)" : "none",
         }}
@@ -211,13 +211,13 @@ const Home = () => {
             alt="Team working"
             className="w-full h-full object-fill opacity-20 md:opacity-40  "
           />
-          <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-radial from-[#F7D270]/60 to-transparent rounded-full blur-3xl opacity-70 pointer-events-none animate-pulse" />
+          <div className="absolute bottom-0 left-0 w-[300px] h-[200px] bg-gradient-radial from-[#ffd800 ]/60 to-transparent rounded-full blur-3xl opacity-70 pointer-events-none animate-pulse" />
         </div>
 
         {/* ✨ Animated Circles & Shapes */}
         <div className="absolute inset-0 pointer-events-none z-10">
           {/* Abstract Line Structures */}
-          <svg className="absolute top-10 left-10 w-40 h-40 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#F7D270" strokeWidth="1">
+          <svg className="absolute top-10 left-10 w-40 h-40 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#ffd800" strokeWidth="1">
             <rect x="10" y="10" width="80" height="80" rx="8" />
           </svg>
 
@@ -230,7 +230,7 @@ const Home = () => {
             <line x1="100" y1="0" x2="0" y2="100" />
           </svg>
 
-          <svg className="absolute top-[20%] right-[20%] w-16 h-16 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#F7D270" strokeWidth="1">
+          <svg className="absolute top-[20%] right-[20%] w-16 h-16 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#ffd800" strokeWidth="1">
             <polygon points="50,15 90,85 10,85" />
           </svg>
 
@@ -243,7 +243,7 @@ const Home = () => {
             <polygon points="50,15 90,85 10,85" />
           </svg>
 
-          <svg className="absolute top-32 left-1/2 w-6 h-6 opacity-10 transform -translate-x-1/2" viewBox="0 0 100 100" fill="none" stroke="#F7D270" strokeWidth="2">
+          <svg className="absolute top-32 left-1/2 w-6 h-6 opacity-10 transform -translate-x-1/2" viewBox="0 0 100 100" fill="none" stroke="#ffd800" strokeWidth="2">
             <line x1="10" y1="10" x2="90" y2="90" />
             <line x1="90" y1="10" x2="10" y2="90" />
           </svg>
@@ -254,7 +254,7 @@ const Home = () => {
           {/* Text Column */}
           <div className=" w-full md:w-[55%] space-y-6 lg:space-y-8 min-h-[550px] justify-center">
   <span
-    className="inline-block bg-[#1E2E2B] text-[#F7D270] px-6 py-2 rounded-md text-lg xl:text-xl font-bold tracking-wide border border-[#3ABF6E]"
+    className="inline-block bg-[#1E2E2B] text-[#ffd800] px-6 py-2 rounded-md text-lg xl:text-xl font-bold tracking-wide border border-[#3ABF6E]"
   >
     Digital Marketing Agency
   </span>
@@ -284,12 +284,12 @@ const Home = () => {
             </motion.p>
 
             <div className="relative inline-block">
-              <div className="absolute inset-0 w-full h-full bg-gradient-radial from-[#F7D270]/60 to-transparent rounded-full blur-2xl opacity-60 animate-pulse z-[-1]" />
+              <div className="absolute inset-0 w-full h-full bg-gradient-radial from-[#ffd800]/60 to-transparent rounded-full blur-2xl opacity-60 animate-pulse z-[-1]" />
      <button className="relative overflow-hidden bg-[#1E2E2B] group px-6 py-3 rounded-md border border-[#3ABF6E] text-white text-base xl:text-lg  hover:text-black  z-10">
   <span className="relative z-10">Schedule a Free Consultation →</span>
 
   {/* Yellow wave */}
-  <span className="absolute inset-0 bg-gradient-to-r from-[#F7D270] to-[#F7D270]/60 blur-sm translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0" />
+  <span className="absolute inset-0 bg-gradient-to-r from-[#ffd800] to-[#ffd800]/60 blur-sm translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0" />
 
 </button>
 
@@ -306,7 +306,7 @@ const Home = () => {
       {/* About Us Section */}
       <section className="relative bg-[#0E1F1C] text-white py-20 px-6 md:px-20">
         {/* Extra Abstract Shapes - About Us */}
-        <svg className="absolute top-10 left-10 w-14 h-14 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#F7D270" strokeWidth="1.5">
+        <svg className="absolute top-10 left-10 w-14 h-14 opacity-10" viewBox="0 0 100 100" fill="none" stroke="#ffd800" strokeWidth="1.5">
           <circle cx="50" cy="50" r="40" />
         </svg>
 
@@ -331,7 +331,7 @@ const Home = () => {
 
           {/* Right Side: Text Content */}
           <div className="md:w-1/2 space-y-6">
-            <span className="inline-block bg-[#1E2E2B] text-[#F7D270] px-6 py-2 rounded-md text-lg font-bold tracking-wide">
+            <span className="inline-block bg-[#1E2E2B] text-[#ffd800] px-6 py-2 rounded-md text-lg font-bold tracking-wide">
               About Us
             </span>
             <h2 className="text-4xl sm:text-5xl font-bold leading-tight">
@@ -344,7 +344,7 @@ const Home = () => {
             {/* Features */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-[#F7D270] text-black p-3 rounded-full text-xl">💰</div>
+                <div className="bg-[#ffd800] text-black p-3 rounded-full text-xl">💰</div>
                 <div>
                   <h4 className="text-lg font-bold">Experience and Expertise</h4>
                   <p className="text-gray-300">
@@ -353,7 +353,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="bg-[#F7D270] text-black p-3 rounded-full text-xl">🛠️</div>
+                <div className="bg-[#ffd800] text-black p-3 rounded-full text-xl">🛠️</div>
                 <div>
                   <h4 className="text-lg font-bold">Customized Solutions</h4>
                   <p className="text-gray-300">
@@ -370,7 +370,7 @@ const Home = () => {
   <span className="relative z-10">More About Us →</span>
 
   {/* Yellow wave background */}
-   <span className="absolute inset-0 bg-gradient-to-r from-[#F7D270] to-[#F7D270]/60 blur-sm translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0" />
+   <span className="absolute inset-0 bg-gradient-to-r from-[#ffd800] to-[#ffd800]/60 blur-sm translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0" />
 </button>
 
             </div>
@@ -405,7 +405,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-base font-semibold tracking-wide uppercase text-lightYellow">
+          <h2 className="text-base font-semibold tracking-wide uppercase text-[#ffd800]">
             Services
           </h2>
           <h1 className="mt-2 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
