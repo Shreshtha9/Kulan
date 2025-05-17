@@ -142,11 +142,106 @@ const LowNav = () => {
                 </li>
                 <li className="relative group">
                     <Link to="/about" className={`hover:text-gray-700 font-bold ${responsiveStyles.textSize} transition-colors duration-300 ease-in-out`}>
-                        About
+                        About Us
                     </Link>
                 </li>
 
-                {/* AUDIENCES DROPDOWN */}
+               
+                
+                {/* SOLUTIONS DROPDOWN */}
+                <li className="relative group">
+                    <button
+                        className={`hover:text-gray-700 flex items-center gap-1 font-bold ${responsiveStyles.textSize} transition-all duration-300 ease-out`}
+                        onClick={toggleSolutions}
+                        type="button"
+                    >
+                        Solutions <FaChevronDown 
+                            size={12} 
+                            className={`transition-transform duration-300 ease-out ${solutionsOpen ? 'rotate-180' : ''}`} 
+                        />
+                    </button>
+                    
+                    {/* Mobile Dropdown */}
+                    <ul
+                        className={`${
+                            isSmallScreen 
+                                ? (solutionsOpen 
+                                    ? 'max-h-[500px] opacity-100 visible' 
+                                    : 'max-h-0 opacity-0 invisible') 
+                                : 'hidden'
+                        } bg-white shadow-xl overflow-hidden transition-all duration-300 ease-out w-full rounded-xl mt-1 origin-top`}
+                    >
+                        {[
+                            { name: 'B2B Content Syndication', link: '#' },
+                            { name: 'Display Advertising', link: '#' },
+                            { name: 'Sales Development', link: '#' },
+                        ].map((item, index) => (
+                            <li 
+                                key={index}
+                                className="px-4 py-3 hover:bg-[#386861] hover:text-white cursor-pointer text-lg border-b border-[#e6d9a1] last:border-b-0"
+                            >
+                                <Link to={item.link} className="block w-full h-full">
+                                    {item.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    
+                    {/* Desktop Megamenu */}
+                    <div 
+                        className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 z-50 mt-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out origin-top`}
+                    >
+                        <div className="bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-200">
+                            <div className="grid grid-cols-3 gap-4 p-4 w-max">
+                                {[
+                                    { 
+                                        name: 'Connect', 
+                                        subText: 'B2B Content Syndication',
+                                        image: '/images/b2b.jpg',
+                                        link: '#'
+                                    },
+                                    { 
+                                        name: 'Engage', 
+                                        subText: 'Display Advertising',
+                                        image: '/images/advertise.jpg',
+                                        link: '#'
+                                    },
+                                    { 
+                                        name: 'Convert', 
+                                        subText: 'Sales Development',
+                                        image: '/images/sales.jpg',
+                                        link: '#'
+                                    },
+                                ].map((item, index) => (
+                                    <div 
+                                        key={index} 
+                                        className="relative w-56 h-56 overflow-hidden rounded-lg group/item"
+                                    >
+                                        <img 
+                                            src={item.image}
+                                            alt={item.name}
+                                            className="absolute inset-0 w-full h-full object-cover z-0 opacity-90 group-hover/item:opacity-100 transition-opacity duration-300"
+                                        />
+                                        
+                                        {/* Content overlay */}
+                                        <div className="absolute inset-0 z-10 p-4 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent">
+                                            <h3 className="text-xl font-bold mb-1 text-white">
+                                                {item.name}
+                                            </h3>
+                                            <p className="text-sm text-white/90">
+                                                {item.subText}
+                                            </p>
+                                        </div>
+                                        
+                                        {/* Full clickable area */}
+                                        <Link to={item.link} className="absolute inset-0 z-20"></Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 {/* AUDIENCES DROPDOWN */}
                 <li className="relative group">
                     <button
                         className={`hover:text-gray-700 flex items-center gap-1 font-bold ${responsiveStyles.textSize} transition-all duration-300 ease-out`}
@@ -231,100 +326,6 @@ const LowNav = () => {
                                         {/* Content overlay */}
                                         <div className="absolute inset-0 z-10 p-4 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent">
                                             <h3 className="text-lg font-bold mb-1 text-white">
-                                                {item.name}
-                                            </h3>
-                                            <p className="text-sm text-white/90">
-                                                {item.subText}
-                                            </p>
-                                        </div>
-                                        
-                                        {/* Full clickable area */}
-                                        <Link to={item.link} className="absolute inset-0 z-20"></Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                {/* SOLUTIONS DROPDOWN */}
-                <li className="relative group">
-                    <button
-                        className={`hover:text-gray-700 flex items-center gap-1 font-bold ${responsiveStyles.textSize} transition-all duration-300 ease-out`}
-                        onClick={toggleSolutions}
-                        type="button"
-                    >
-                        Solutions <FaChevronDown 
-                            size={12} 
-                            className={`transition-transform duration-300 ease-out ${solutionsOpen ? 'rotate-180' : ''}`} 
-                        />
-                    </button>
-                    
-                    {/* Mobile Dropdown */}
-                    <ul
-                        className={`${
-                            isSmallScreen 
-                                ? (solutionsOpen 
-                                    ? 'max-h-[500px] opacity-100 visible' 
-                                    : 'max-h-0 opacity-0 invisible') 
-                                : 'hidden'
-                        } bg-white shadow-xl overflow-hidden transition-all duration-300 ease-out w-full rounded-xl mt-1 origin-top`}
-                    >
-                        {[
-                            { name: 'B2B Content Syndication', link: '#' },
-                            { name: 'Display Advertising', link: '#' },
-                            { name: 'Sales Development', link: '#' },
-                        ].map((item, index) => (
-                            <li 
-                                key={index}
-                                className="px-4 py-3 hover:bg-[#386861] hover:text-white cursor-pointer text-lg border-b border-[#e6d9a1] last:border-b-0"
-                            >
-                                <Link to={item.link} className="block w-full h-full">
-                                    {item.name}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    
-                    {/* Desktop Megamenu */}
-                    <div 
-                        className={`hidden md:block absolute left-1/2 transform -translate-x-1/2 z-50 mt-8 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out origin-top`}
-                    >
-                        <div className="bg-white text-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                            <div className="grid grid-cols-3 gap-4 p-4 w-max">
-                                {[
-                                    { 
-                                        name: 'Connect', 
-                                        subText: 'B2B Content Syndication',
-                                        image: '/images/b2b.jpg',
-                                        link: '#'
-                                    },
-                                    { 
-                                        name: 'Engage', 
-                                        subText: 'Display Advertising',
-                                        image: '/images/advertise.jpg',
-                                        link: '#'
-                                    },
-                                    { 
-                                        name: 'Convert', 
-                                        subText: 'Sales Development',
-                                        image: '/images/sales.jpg',
-                                        link: '#'
-                                    },
-                                ].map((item, index) => (
-                                    <div 
-                                        key={index} 
-                                        className="relative w-56 h-56 overflow-hidden rounded-lg group/item"
-                                    >
-                                        <img 
-                                            src={item.image}
-                                            alt={item.name}
-                                            className="absolute inset-0 w-full h-full object-cover z-0 opacity-90 group-hover/item:opacity-100 transition-opacity duration-300"
-                                        />
-                                        
-                                        {/* Content overlay */}
-                                        <div className="absolute inset-0 z-10 p-4 flex flex-col justify-end bg-gradient-to-t from-black/70 to-transparent">
-                                            <h3 className="text-xl font-bold mb-1 text-white">
                                                 {item.name}
                                             </h3>
                                             <p className="text-sm text-white/90">
